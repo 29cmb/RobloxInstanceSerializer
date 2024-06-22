@@ -3,10 +3,10 @@ name: Build Rojo Project
 on:
   push:
     branches:
-      - master
+      - master  # Triggers on push to any branch
   pull_request:
     branches:
-      - master
+    - master
 
 jobs:
   build:
@@ -18,10 +18,10 @@ jobs:
 
       - name: Install Rojo
         run: |
-          wget https://github.com/rojo-rbx/rojo/releases/download/v7.2.1/rojo-7.2.1-linux.tar.gz
-          tar -xzf rojo-7.2.1-linux.tar.gz
+          ROJO_VERSION="7.2.1"  # Set the version you want to install
+          wget https://github.com/rojo-rbx/rojo/releases/download/v$ROJO_VERSION/rojo-$ROJO_VERSION-linux-x86_64 -O rojo
+          chmod +x rojo
           sudo mv rojo /usr/local/bin/rojo
-          sudo chmod +x /usr/local/bin/rojo
 
       - name: Build project
         run: rojo build -o "ObjectSerializer.rbxlx"
