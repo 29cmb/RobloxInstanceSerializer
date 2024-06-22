@@ -1,3 +1,4 @@
+local DataStoreService = game:GetService("DataStoreService")
 local Properties = require(script.Properties)
 local serializer = {}
 
@@ -14,7 +15,7 @@ function serializer:Serialize(instance: Instance)
 end
 
 function serializeToTable(instance, _table)
-	local properties = Properties[instance.ClassName]
+	local properties = Properties[instance.ClassName] or {}
 	local propertyData = {
 		["ClassName"] = instance.ClassName,
 		["Children"] = {}
@@ -24,7 +25,9 @@ function serializeToTable(instance, _table)
 		local data = instance[property]
 
 		-- Exceptions by type
-		if typeof(data) == "Color3" then
+		if typeof(data) == "Color3" or typeof(data) == "BrickColor" then
+			if typeof(data) == "BrickColor" then data = data.Color end
+
 			data = {
 				r = data.r,
 				g = data.g,

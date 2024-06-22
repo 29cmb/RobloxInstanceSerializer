@@ -31,6 +31,63 @@ return {
         "Massless",
         "Shape"
     },
+    ["SpawnLocation"] = {
+        -- Appearance
+        "CastShadow",
+        "Color",
+        "Material",
+        "MaterialVariant",
+        "Reflectance",
+        "Transparency",
+        -- Data
+        "Archivable",
+        "Locked",
+        "Name",
+        -- Transform
+        "Size",
+        "Position",
+        "Orientation",
+        -- Collision
+        "CanCollide",
+        "CanTouch",
+        "CanQuery",
+        -- Part
+        "Anchored",
+        "Massless",
+        "Shape",
+        -- Teams
+        "AllowTeamChangeOnTouch",
+        "Neutral",
+        "TeamColor"
+    },
+    ["MeshPart"] = {
+        -- Appearance
+        "CastShadow",
+        "Color",
+        "DoubleSided",
+        "Material",
+        "MaterialVariant",
+        "MeshId",
+        "Reflectance",
+        "RenderFidelity",
+        "TextureID",
+        "Transparency",
+        -- Data
+        "Archiveable",
+        "Locked",
+        "Name",
+        -- Transform
+        "Size",
+        "Position",
+        "Orientation",
+        -- Collision
+        "CanCollide",
+        "CanTouch",
+        "CanQuery",
+        -- Part
+        "Anchored",
+        "Massless"
+    },
     ["UnionOperation"] = {
         -- Appearance
         "CastShadow",
@@ -70,6 +127,11 @@ return {
         "Archivable",
         "Name"
     },
+    ["Configuration"] = {
+        -- Data
+        "Archiveable",
+        "Name"
+    },
     ["Tool"] = {
         -- Appearance
         "ToolTip",
@@ -105,5 +167,11 @@ return {
         -- Hidden
         "Source" -- only run if security check is high enough
     },
-    
+    ["ModuleScript"] = {
+        -- Data
+        "Archiveable",
+        "Name",
+        -- Hiddden
+        "Source"
+    }
 }
