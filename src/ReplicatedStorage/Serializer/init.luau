@@ -29,9 +29,9 @@ function serializeToTable(instance, _table)
 			if typeof(data) == "BrickColor" then data = data.Color end
 
 			data = {
-				r = data.r,
-				g = data.g,
-				b = data.b
+				r = data.R,
+				g = data.G,
+				b = data.B
 			}
 		elseif typeof(data) == "Vector3" then
 			data = {
@@ -87,7 +87,6 @@ function deserializeToParent(_table, parent)
 		elseif _table[v].r ~= nil and _table[v].g ~= nil and _table[v].b ~= nil then
 			ins[v] = Color3.new(_table[v].r, _table[v].g, _table[v].b)
 		elseif _table[v].Key ~= nil and _table[v].Value ~= nil then
-			print(_table[v].Value)
 			ins[v] = _table[v].Value
 		end
 	end
