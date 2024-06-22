@@ -18,8 +18,8 @@ jobs:
 
       - name: Install Rojo
         run: |
-          wget https://github.com/rojo-rbx/rojo/releases/download/v7.2.0/rojo-7.2.0-linux.tar.gz
-          tar -xzf rojo-7.2.0-linux.tar.gz
+          wget https://github.com/rojo-rbx/rojo/releases/download/v7.2.1/rojo-7.2.1-linux.tar.gz
+          tar -xzf rojo-7.2.1-linux.tar.gz
           sudo mv rojo /usr/local/bin/rojo
           sudo chmod +x /usr/local/bin/rojo
 
