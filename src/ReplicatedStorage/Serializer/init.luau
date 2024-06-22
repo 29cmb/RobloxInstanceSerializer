@@ -79,8 +79,11 @@ function deserializeToParent(_table, parent)
 	local ins = Instance.new(_table.ClassName, parent)
 	local properties = Properties[ins.ClassName] or {}
 
-	for _,v in pairs(properties) do 
-		if typeof(_table[v]) ~= "table" then
+	for _,v in pairs(properties) do
+		if v == "Grip" then
+			ins[v].Position = _table[v].Position
+			ins[v].Orientation = _table[v].Orientation
+		elseif typeof(_table[v]) ~= "table" then
 			ins[v] = _table[v]
 		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z ~= nil then
 			ins[v] = Vector3.new(_table[v].X, _table[v].Y, _table[v].Z)
