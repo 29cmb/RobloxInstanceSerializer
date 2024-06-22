@@ -19,7 +19,7 @@ jobs:
       - name: Install Rojo
         run: |
           ROJO_VERSION="7.2.1"  # Set the version you want to install
-          wget https://github.com/rojo-rbx/rojo/releases/download/v$ROJO_VERSION/rojo-$ROJO_VERSION-linux-x86_64 -O rojo
+          wget https://github.com/rojo-rbx/rojo/releases/download/v7.4.1/rojo$ROJO_VERSION$-linux-x86_64.zip -O rojo
           chmod +x rojo
           sudo mv rojo /usr/local/bin/rojo
 
