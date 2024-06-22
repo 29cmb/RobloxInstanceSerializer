@@ -69,5 +69,34 @@ function serializeToTable(instance, _table)
 	table.insert(_table, propertyData)
 end
 
+function serializer:Deserialize(_table, parent)
+	local firstObject = _table[1]
+	if firstObject == nil or firstObject.ClassName == nil then return end
+	return deserializeToParent(firstObject, parent)
+end
+
+function deserializeToParent(_table, parent)
+	local ins = Instance.new(_table.ClassName, parent)
+	local properties = Properties[ins.ClassName] or {}
+
+	for _,v in pairs(properties) do 
+		if typeof(_table[v]) ~= "table" then
+			ins[v] = _table[v]
+		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z ~= nil then
+			ins[v] = Vector3.new(_table[v].X, _table[v].Y, _table[v].Z)
+		elseif _table[v].r ~= nil and _table[v].g ~= nil and _table[v].b ~= nil then
+			ins[v] = Color3.new(_table[v].r, _table[v].g, _table[v].b)
+		elseif _table[v].Key ~= nil and _table[v].Value ~= nil then
+			print(_table[v].Value)
+			ins[v] = _table[v].Value
+		end
+	end
+
+	for _,child in pairs(_table.Children) do 
+		deserializeToParent(child, ins)
+	end
+
+	return ins
+end
 
 return serializer

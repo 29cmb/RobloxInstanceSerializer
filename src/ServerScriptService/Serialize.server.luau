@@ -1,2 +1,3 @@
 local Serializer = require(game.ReplicatedStorage.Serializer)
-print(Serializer:Serialize(script.Part))
+local ser = Serializer:Serialize(script.Part)
+local deser = Serializer:Deserialize(ser, game.ReplicatedStorage)
