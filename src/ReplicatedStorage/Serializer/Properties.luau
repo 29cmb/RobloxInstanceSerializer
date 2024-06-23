@@ -169,7 +169,7 @@ return {
     },
     ["ModuleScript"] = {
         -- Data
-        "Archiveable",
+        "Archivable",
         "Name",
         -- Hiddden
         "Source"

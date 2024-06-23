@@ -27,7 +27,6 @@ function serializeToTable(instance, _table)
 		-- Exceptions by type
 		if typeof(data) == "Color3" or typeof(data) == "BrickColor" then
 			if typeof(data) == "BrickColor" then data = data.Color end
-
 			data = {
 				r = data.R,
 				g = data.G,
@@ -72,7 +71,7 @@ end
 function serializer:Deserialize(_table, parent)
 	local firstObject = _table[1]
 	if firstObject == nil or firstObject.ClassName == nil then return end
-	return deserializeToParent(firstObject, parent)
+	return deserializeToParent(firstObject, parent or game.ReplicatedStorage)
 end
 
 function deserializeToParent(_table, parent)
