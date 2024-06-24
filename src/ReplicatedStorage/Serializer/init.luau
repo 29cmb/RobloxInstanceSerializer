@@ -108,7 +108,7 @@ function deserializeToParent(_table, parent)
 		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z ~= nil then
 			ins[v] = Vector3.new(_table[v].X, _table[v].Y, _table[v].Z)
 		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z == nil then
-			ins[v] = Vector3.new(_table[v].X, _table[v].Y)
+			ins[v] = Vector2.new(_table[v].X, _table[v].Y)
 		elseif _table[v].r ~= nil and _table[v].g ~= nil and _table[v].b ~= nil then
 			ins[v] = Color3.new(_table[v].r, _table[v].g, _table[v].b)
 		elseif _table[v].Key ~= nil and _table[v].Value ~= nil then
