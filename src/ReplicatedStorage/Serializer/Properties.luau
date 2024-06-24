@@ -569,5 +569,49 @@ return {
         "Archivable",
         "Name",
         "Value"
-    }
+    },
+    ["ClickDetector"] = {
+        "Archivable",
+        "MaxActivationDistance",
+        "Name",
+        "CursorIcon"
+    },
+    ["Decal"] = {
+        "Color3",
+        "Texture",
+        "Transparency",
+        "ZIndex",
+        "Archivable",
+        "Face",
+        "Name"
+    },
+    ["DragDetector"] = {
+        "Archivable",
+        "MaxActivationDistance",
+        "Name",
+        "ReferenceInstance",
+        "DragStyle",
+        "Enabled",
+        "PermissionPolicy",
+        "ResponseStyle",
+        "RunLocally",
+        "Axis",
+        "Orientation",
+        "SecondaryAxis",
+        "WorldAxis",
+        "WorldSecondaryAxis",
+        "MaxDragAngle",
+        "MaxDragTranslation",
+        "MinDragAngle",
+        "MinDragTranslation",
+        "ActivatedCursorIcon",
+        "CursorIcon",
+        "GamepadModeSwitchKeyCode",
+        "KeyboardModeSwitchKeyCode",
+        "VRSwitchKeyCode",
+        "ApplyAtCenterOfMass",
+        "MaxForce",
+        "MaxTorque",
+        "Responsiveness"
+    },
 }
