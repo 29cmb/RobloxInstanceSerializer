@@ -358,7 +358,6 @@ return {
         "Archivable",
         "Active",
         "AnchorPoint",
-        "AutoButtonColor",
         "BackgroundColor3",
         "BackgroundTransparency",
         "BorderColor3",
@@ -534,5 +533,41 @@ return {
         "Archivable",
         "Enabled",
         "Name"
+    },
+    -- Value bases
+    ["BoolValue"] = {
+        "Archivable",
+        "Name",
+        "Value"
+    },
+    ["BrickColorValue"] = {
+        "Archivable",
+        "Name",
+        "Value"
+    },
+    ["Color3Value"] = {
+        "Archivable",
+        "Name",
+        "Value"
+    },
+    ["IntValue"] = {
+        "Archivable",
+        "Name",
+        "Value"
+    },
+    ["NumberValue"] = {
+        "Archivable",
+        "Name",
+        "Value"
+    },
+    ["StringValue"] = {
+        "Archivable",
+        "Name",
+        "Value"
+    },
+    ["Vector3Value"] = {
+        "Archivable",
+        "Name",
+        "Value"
     }
 }

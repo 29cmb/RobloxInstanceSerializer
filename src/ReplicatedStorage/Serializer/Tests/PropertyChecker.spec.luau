@@ -18,7 +18,7 @@ return function()
             if passedInstanceCheck == false then return SKIP() end
             for name ,data in pairs(Properties) do
                 for _,property in pairs(data) do
-                    print("Checking", property)
+                    print("Checking", property, "for", name)
                     local success, _ = pcall(function()
                         local instance = Instance.new(name)
                         print(instance[property])
