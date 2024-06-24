@@ -400,5 +400,139 @@ return {
         "TextWrapped",
         "TextXAlignment",
         "TextYAlignment"
+    },
+    -- UI Modifiers
+    ["UIAspectRatioConstraint"] = {
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "AspectRatio",
+        "AspectType",
+        "DominantAxis"
+    },
+    ["UISizeConstraint"] = {
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "MaxSize",
+        "MinSize"
+    },
+    ["UITextSizeConstraint"] = {
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "MaxTextSize",
+        "MinTextSize"
+    },
+    ["UICorner"] = {
+        -- Appearance
+        "CornerRadius",
+        -- Data
+        "Archivable",
+        "Name"
+    },
+    ["UIGridLayout"] = {
+        -- Appearance
+        "CellPadding",
+        "CellSize",
+        -- Data
+        "Archivable",
+        "Name",
+        -- Finally! One with more than just 2!
+        -- Behavior
+        "FillDirection",
+        "FillDirectionMaxCells",
+        "SortOrder",
+        "StartCorner",
+        -- Alignment
+        "HorizontalAlignment",
+        "VerticalAlignment"
+    },
+    ["UIListLayout"] = {
+        -- Appearance
+        "Padding",
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "FillDirection",
+        "SortOrder",
+        "Wraps",
+        -- Alignment
+        "HorizontalAlignment",
+        "HorizontalFlex",
+        "ItemLineAlignment",
+        "VerticalAlignment",
+        "VerticalFlex"
+    },
+    ["UIPageLayout"] = {
+        -- Appearance
+        "Animated",
+        "Circular",
+        "EasingDirection",
+        "EasingStyle",
+        "Padding",
+        "TweenTime",
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "FillDirection",
+        "SortOrder",
+        -- Alignment
+        "HorizontalAlignment",
+        "VerticalAlignment",
+        -- Input
+        "GamepadInputEnabled",
+        "ScrollWheelInputEnabled",
+        "TouchInputEnabled"
+    },
+    ["UITableLayout"] = {
+        -- Appearance
+        "FillEmptySpaceColumns",
+        "FillEmptySpaceRows",
+        "Padding",
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "FillDirection",
+        "MajorAxis",
+        "SortOrder",
+        -- Alignment
+        "HorizontalAlignment",
+        "VerticalAlignment"
+    },
+    ["UIPadding"] = {
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "PaddingBottom",
+        "PaddingLeft",
+        "PaddingRight",
+        "PaddingTop"
+    },
+    ["UIScale"] = {
+        -- Data
+        "Archivable",
+        "Name",
+        -- Behavior
+        "Scale"
+    },
+    ["UIStroke"] = {
+        -- Appearance
+        "ApplyStrokeMode",
+        "Color",
+        "LineJoinMode",
+        "Thickness",
+        "Transparency",
+        -- Data
+        "Archivable",
+        "Enabled",
+        "Name"
     }
 }
