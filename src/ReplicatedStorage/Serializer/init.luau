@@ -32,11 +32,23 @@ function serializeToTable(instance, _table)
 				g = data.G,
 				b = data.B
 			}
+		elseif typeof(data) == "UDim2" then
+			data = {
+				xScale = data.X.Scale,
+				xOffset = data.X.Offset,
+				yScale = data.Y.Scale,
+				yOffset = data.Y.Offset
+			}
 		elseif typeof(data) == "Vector3" then
 			data = {
 				x = data.X,
 				y = data.Y,
 				z = data.Z
+			}
+		elseif typeof(data) == "Vector2" then
+			data = {
+				x = data.X,
+				y = data.Y
 			}
 		elseif typeof(data) == "EnumItem" then
 			data = {
@@ -84,8 +96,12 @@ function deserializeToParent(_table, parent)
 			ins[v].Orientation = _table[v].Orientation
 		elseif typeof(_table[v]) ~= "table" then
 			ins[v] = _table[v]
+		elseif _table[v].xScale ~= nil and _table[v].xOffset ~= nil and _table[v].yScale ~= nil and _table[v].yOffset ~= nil then
+			ins[v] = UDim2.new(_table[v].xScale, _table[v].xOffset, _table[v].yScale, _table[v].yOffset)
 		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z ~= nil then
 			ins[v] = Vector3.new(_table[v].X, _table[v].Y, _table[v].Z)
+		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z == nil then
+			ins[v] = Vector3.new(_table[v].X, _table[v].Y)
 		elseif _table[v].r ~= nil and _table[v].g ~= nil and _table[v].b ~= nil then
 			ins[v] = Color3.new(_table[v].r, _table[v].g, _table[v].b)
 		elseif _table[v].Key ~= nil and _table[v].Value ~= nil then

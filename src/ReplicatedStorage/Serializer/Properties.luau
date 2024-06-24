@@ -178,6 +178,7 @@ return {
         -- Data
         "Archivable",
         "Active",
+        "AnchorPoint",
         "BackgroundColor3",
         "BackgroundTransparency",
         "BorderColor3",
