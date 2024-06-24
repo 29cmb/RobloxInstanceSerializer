@@ -39,6 +39,11 @@ function serializeToTable(instance, _table)
 				yScale = data.Y.Scale,
 				yOffset = data.Y.Offset
 			}
+		elseif typeof(data) == "UDim" then
+			data = {
+				Scale = data.Scale,
+				Offset = data.Offset
+			}
 		elseif typeof(data) == "Vector3" then
 			data = {
 				x = data.X,
@@ -98,6 +103,8 @@ function deserializeToParent(_table, parent)
 			ins[v] = _table[v]
 		elseif _table[v].xScale ~= nil and _table[v].xOffset ~= nil and _table[v].yScale ~= nil and _table[v].yOffset ~= nil then
 			ins[v] = UDim2.new(_table[v].xScale, _table[v].xOffset, _table[v].yScale, _table[v].yOffset)
+		elseif _table[v].Scale ~= nil and _table[v].Offset ~= nil then
+			ins[v] = UDim.new(_table[v].Scale, _table[v].Offset)
 		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z ~= nil then
 			ins[v] = Vector3.new(_table[v].X, _table[v].Y, _table[v].Z)
 		elseif _table[v].X ~= nil and _table[v].Y ~= nil and _table[v].Z == nil then
