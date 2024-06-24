@@ -614,4 +614,44 @@ return {
         "MaxTorque",
         "Responsiveness"
     },
+    ["MaterialVariant"] = {
+        "BaseMaterial",
+        "ColorMap",
+        "MetalnessMap",
+        "NormalMap",
+        "RoughnessMap",
+        "MaterialPattern",
+        "StudsPerTile",
+        "Archivable",
+        "Name"
+    },
+    ["ProximityPrompt"] = {
+        "Archivable",
+        "ActionText",
+        "ClickablePrompt",
+        "Enabled",
+        "Exclusivity",
+        "GamepadKeyCode",
+        "HoldDuration",
+        "KeyboardKeyCode",
+        "MaxActivationDistance",
+        "Name",
+        "ObjectText",
+        "RequiresLineOfSight",
+        "Style",
+        "UIOffset"
+    },
+    ["Texture"] = {
+        "Color3",
+        "OffsetStudsU",
+        "OffsetStudsV",
+        "StudsPerTileU",
+        "StudsPerTileV",
+        "Texture",
+        "Transparency",
+        "ZIndex",
+        "Archivable",
+        "Face",
+        "Name"
+    }
 }
