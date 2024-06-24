@@ -73,7 +73,7 @@ return {
         "TextureID",
         "Transparency",
         -- Data
-        "Archiveable",
+        "Archivable",
         "Locked",
         "Name",
         -- Transform
@@ -129,7 +129,7 @@ return {
     },
     ["Configuration"] = {
         -- Data
-        "Archiveable",
+        "Archivable",
         "Name"
     },
     ["Tool"] = {
@@ -173,5 +173,41 @@ return {
         "Name",
         -- Hiddden
         "Source"
+    },
+    ["Frame"] = {
+        -- Data
+        "Archivable",
+        "Active",
+        "BackgroundColor3",
+        "BackgroundTransparency",
+        "BorderColor3",
+        "BorderMode",
+        "BorderSizePixel",
+        "Interactable",
+        "LayoutOrder",
+        "Name",
+        "Position",
+        "Rotation",
+        "Size",
+        "SizeConstraint",
+        "Style",
+        "Visible",
+        "ZIndex",
+        -- Behavior
+        "ClipsDescendants",
+    },
+    ["ScreenGui"] = {
+        -- Appearance
+        "ClipToDeviceSafeArea",
+        "SafeAreaCompatibility",
+        "ScreenInsets",
+        -- Data
+        "Archivable",
+        "DisplayOrder",
+        "Enabled",
+        "IgnoreGuiInset",
+        "Name",
+        "ResetOnSpawn",
+        "ZIndexBehavior"
     }
 }
